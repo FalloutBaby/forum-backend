@@ -15,8 +15,8 @@ class Comments extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->integer('post_id');
+            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('post_id');
             $table->text('content');
             $table->integer('like')->default(0);
             $table->integer('dislike')->default(0);
